@@ -1,7 +1,9 @@
 module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log(context.bindings);
+    context.log('Bindings = ' + JSON.stringify(context.bindings));
     context.log(context.req);
+    context.log('Request = ' + JSON.stringify(req));
     
     const customers = [
         { id: 1, name: 'John', city: 'Orlando' },
