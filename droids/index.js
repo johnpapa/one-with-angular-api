@@ -1,7 +1,7 @@
 module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
-    context.log(context.bindings);
-    context.log(context.req);
+    context.log('Bindings' , context.bindings);
+    context.log('Request', req);
 
     const droids = [
         { id: 1, name: 'BB8' },
