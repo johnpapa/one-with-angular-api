@@ -14,13 +14,13 @@ module.exports = function (context, req) {
         const id = parseInt(req.query.id);
         const customer = customers.filter(c => c.id === id);
         // context.log(req.query.id);
-        res = {
+        context.res = {
             // status: 200, /* Defaults to 200 */
             body: customer
         };
     }
     else {
-        res = {
+        context.res = {
             // status: 200, /* Defaults to 200 */
             body: customers
         };
@@ -29,5 +29,6 @@ module.exports = function (context, req) {
         //     body: "Please pass a name on the query string or in the request body"
         // };
     }
-    context.done(null, res);
+    //context.done(null, res);
+    context.done();
 };
