@@ -6,7 +6,8 @@ module.exports = function (context, req) {
     const customers = [
         { id: 1, name: 'John', city: 'Orlando' },
         { id: 2, name: 'Peggy', city: 'New York' },
-        { id: 3, name: 'Julie', city: 'Seattle' }
+        { id: 3, name: 'Julie', city: 'Seattle' },
+        { id: 4, name: 'Brian', city: 'New York' }
     ];
 
     // if (req.query.name || (req.body && req.body.name)) {
