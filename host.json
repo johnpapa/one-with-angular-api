@@ -1,5 +1,5 @@
 {
     "http": {
-        "routePrefix": "api/v2"
+        "routePrefix": "api"
     }
 }
