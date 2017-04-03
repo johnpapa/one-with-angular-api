@@ -1,0 +1,24 @@
+  {
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "appName": {
+        "value": "onewithangularapp"
+      },
+      "storageAccountName": {
+        "value": "onewithangularstorage"
+      },
+      "storageAccountType": {
+        "value": "Standard_LRS"
+      },
+      "repoURL": {
+        "value": "https://github.com/johnpapa/one-with-angular-api"
+      },
+      "branch": {
+        "value": "master"
+      },
+      "location": {
+        "value": "East US"
+      }
+    }
+  }

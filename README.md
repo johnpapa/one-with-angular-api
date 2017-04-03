@@ -8,3 +8,14 @@ https://rogue-one-123.azurewebsites.net/api/rebels?id=11
 https://rogue-one-123.azurewebsites.net/api/droids
 
 https://rogue-one-123.azurewebsites.net/api/planets
+
+
+## Azure Deployment
+
+```bash
+az login
+
+az group create --name "onewithangulargroup" --location "East US"
+
+az group deployment create --name OneWithAngularDeployment --resource-group onewithangulargroup --template-file azuredeploy.json --parameters @parameters.json
+```
