@@ -5,7 +5,7 @@ module.exports = function (context, req) {
     const Rebel = require('../models/rebel');
     let res = { };
 
-    const rebels: Rebel[] = [
+    const rebels = [
         new Rebel(10, 'Jyn Erso', 1),
         new Rebel(11, 'Cassian Andor', 2),
         new Rebel(12, 'K-2SO', 3),
