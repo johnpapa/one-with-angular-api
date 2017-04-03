@@ -2,7 +2,7 @@ module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
     context.log('Request', req);
-    import Rebel from '../models/rebel';
+    const Rebel = require('../models/rebel');
     let res = { };
 
     export class Rebel {
