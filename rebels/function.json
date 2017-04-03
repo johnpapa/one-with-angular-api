@@ -7,7 +7,7 @@
       "methods": [
         "get"
       ],
-      "name": "req"
+      "name": "request"
     },
     {
       "type": "http",

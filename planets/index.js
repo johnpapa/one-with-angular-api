@@ -1,9 +1,9 @@
-module.exports = function (context, req) {
+module.exports = function (context, request) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
-    context.log('Request', req);
+    context.log('Request', request);
     const Planet = require('../models/planet');
-    let res = { };
+    let response = { };
 
     const planets = [
         new Planet(1, 'Vallt'),
@@ -17,17 +17,17 @@ module.exports = function (context, req) {
         new Planet(9, 'Aria Prime')
     ];
 
-    if (req.query && req.query.id) {
-        const id = parseInt(req.query.id);
+    if (request.query && request.query.id) {
+        const id = parseInt(request.query.id);
         const planet = planets.filter(c => c.id === id);
-        res = {
+        response = {
             body: planet
         };
     }
     else {
-        res = {
+        response = {
             body: planets
         };
     }
-    context.done(null, res);
+    context.done(null, response);
 };

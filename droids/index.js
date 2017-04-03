@@ -1,8 +1,8 @@
-module.exports = function (context, req) {
+module.exports = function (context, request) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
-    context.log('Request', req);
-    let res = { };
+    context.log('Request', request);
+    let response = { };
 
     const droids = [
         { id: 1, name: 'BB8' },
@@ -11,13 +11,13 @@ module.exports = function (context, req) {
         { id: 4, name: 'R2D2' }
     ];
 
-    if (req.query && req.query.id) {
-        const id = parseInt(req.query.id);
+    if (request.query && request.query.id) {
+        const id = parseInt(request.query.id);
         const droid = droids.filter(d => d.id === id);
-        res.body = droid
+        response.body = droid
     }
     else {
-        res.body = droids
+        response.body = droids
     }
-    context.done(null, res);
+    context.done(null, response);
 };

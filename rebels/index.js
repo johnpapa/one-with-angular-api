@@ -1,9 +1,9 @@
-module.exports = function (context, req) {
+module.exports = function (context, request) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
-    context.log('Request', req);
+    context.log('Request', request);
     const Rebel = require('../models/rebel');
-    let res = { };
+    let response = { };
 
     const rebels = [
         new Rebel(10, 'Jyn Erso', 1),
@@ -20,17 +20,17 @@ module.exports = function (context, req) {
         new Rebel(21, 'Lyra Erso', 9)
     ];
 
-    if (req.query && req.query.id) {
-        const id = parseInt(req.query.id);
+    if (request.query && request.query.id) {
+        const id = parseInt(request.query.id);
         const rebel = rebels.filter(c => c.id === id);
-        res = {
+        response = {
             body: rebel
         };
     }
     else {
-        res = {
+        response = {
             body: rebels
         };
     }
-    context.done(null, res);
+    context.done(null, response);
 };
