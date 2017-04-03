@@ -2,34 +2,26 @@ module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
     context.log('Request', req);
-    
-    const customers = [
+    let res = { };
+
+    const rebels = [
         { id: 1, name: 'John', city: 'Orlando' },
         { id: 2, name: 'Peggy', city: 'New York' },
         { id: 3, name: 'Julie', city: 'Seattle' },
         { id: 4, name: 'Brian', city: 'New York' }
     ];
 
-    // if (req.query.name || (req.body && req.body.name)) {
     if (req.query && req.query.id) {
         const id = parseInt(req.query.id);
-        const customer = customers.filter(c => c.id === id);
-        // context.log(req.query.id);
+        const rebel = rebels.filter(c => c.id === id);
         res = {
-            // status: 200, /* Defaults to 200 */
-            body: customer
+            body: rebel
         };
     }
     else {
         res = {
-            // status: 200, /* Defaults to 200 */
-            body: customers
+            body: rebels
         };
-        // res = {
-        //     status: 400,
-        //     body: "Please pass a name on the query string or in the request body"
-        // };
     }
     context.done(null, res);
-    // context.done();
 };

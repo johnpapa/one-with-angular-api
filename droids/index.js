@@ -2,6 +2,7 @@ module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
     context.log('Bindings' , context.bindings);
     context.log('Request', req);
+    let res = { };
 
     const droids = [
         { id: 1, name: 'BB8' },
@@ -13,14 +14,10 @@ module.exports = function (context, req) {
     if (req.query && req.query.id) {
         const id = parseInt(req.query.id);
         const droid = droids.filter(d => d.id === id);
-        res = {
-            body: droid
-        };
+        res.body = droid
     }
     else {
-        res = {
-            body: droids
-        };
+        res.body = droids
     }
     context.done(null, res);
 };
