@@ -5,10 +5,6 @@ module.exports = function (context, req) {
     const Rebel = require('../models/rebel');
     let res = { };
 
-    export class Rebel {
-        constructor(public id: number, public name: string, public homeWorldId: number) { }
-    }
-
     const rebels: Rebel[] = [
         new Rebel(10, 'Jyn Erso', 1),
         new Rebel(11, 'Cassian Andor', 2),
