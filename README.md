@@ -1,12 +1,10 @@
-# azure-func-test
+# one-with-angular-api
 
 
-https://rogue-one-123.scm.azurewebsites.net/dev/wwwroot/characters/index.js
+https://rogue-one-123.azurewebsites.net/api/rebels
 
-https://rogue-one-123.azurewebsites.net/api/characters
-
-https://rogue-one-123.azurewebsites.net/api/characters?id=3
+https://rogue-one-123.azurewebsites.net/api/rebels?id=11
 
 https://rogue-one-123.azurewebsites.net/api/droids
 
-https://rogue-one-123.azurewebsites.net/api/droids?id=1
+https://rogue-one-123.azurewebsites.net/api/planets
