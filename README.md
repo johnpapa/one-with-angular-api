@@ -1,13 +1,13 @@
 # one-with-angular-api
 
 
-https://rogue-one-123.azurewebsites.net/api/rebels
+https://onewithangularapp.azurewebsites.net/api/rebels
 
-https://rogue-one-123.azurewebsites.net/api/rebels?id=11
+https://onewithangularapp.azurewebsites.net/api/rebels?id=11
 
-https://rogue-one-123.azurewebsites.net/api/droids
+https://onewithangularapp.azurewebsites.net/api/droids
 
-https://rogue-one-123.azurewebsites.net/api/planets
+https://onewithangularapp.azurewebsites.net/api/planets
 
 
 ## Azure Deployment
