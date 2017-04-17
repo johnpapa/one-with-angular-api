@@ -3,7 +3,6 @@ module.exports = function (context, request) {
   context.log('Bindings', context.bindings);
   context.log('Request', request);
 
-  let planets = require('../data/planets');
   let planetsData = require('../data/planets');
   let planets = planetsData.getPlanets();
   let response = {};
