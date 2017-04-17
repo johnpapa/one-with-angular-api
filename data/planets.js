@@ -1,6 +1,10 @@
 const Planet = require('../models/planet');
 
-export const planets = [
+module.exports = {
+  getPlanets: getPlanets
+}
+
+const planets = [
   new Planet(1, 'Vallt'),
   new Planet(2, 'Fest'),
   new Planet(3, 'Vulpter'),
@@ -11,3 +15,7 @@ export const planets = [
   new Planet(8, 'Alderaan'),
   new Planet(9, 'Aria Prime')
 ];
+
+function getPlanets() {
+  return planets;
+}
