@@ -1,6 +1,10 @@
 const Rebel = require('../models/rebel');
 
-export const rebels = [
+module.exports = {
+  getRebels: getRebels
+}
+
+const rebels = [
   new Rebel(10, 'Jyn Erso', 1),
   new Rebel(11, 'Cassian Andor', 2),
   new Rebel(12, 'K-2SO', 3),
@@ -14,3 +18,7 @@ export const rebels = [
   new Rebel(20, 'Leia Organa', 8),
   new Rebel(21, 'Lyra Erso', 9)
 ];
+
+function getRebels() {
+  return rebels;
+}
