@@ -22,6 +22,6 @@ az group deployment create --name OneWithAngularDeployment --resource-group onew
 
 ## Try It
 
-[Free Azure Account](https://azure.microsoft.com/free/)
+[Free Azure Account](https://azure.microsoft.com/free/?WT.mc_id=onewithangularapi-github-jopapa)
 
-[Try Azure Functions Playground](https://azure.microsoft.com/try/app-service/functions/)
+[Try Azure Functions Playground](https://azure.microsoft.com/try/app-service/functions/?WT.mc_id=onewithangularapi-github-jopapa)
